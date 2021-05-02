@@ -5,25 +5,25 @@
 class Takolabel < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tommy6073/takolabel/releases/download/0.0.1/takolabel_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "b90ca18782c88c44149f106052bee5cee60b94d69d68ef605ac4fff9e14a9441"
+    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.2/takolabel_0.0.2_Darwin_x86_64.tar.gz"
+    sha256 "f826fc4475671183a7d10e815572f2621cba3aea4f1b1005fa04256907db5d88"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tommy6073/takolabel/releases/download/0.0.1/takolabel_0.0.1_Darwin_arm64.tar.gz"
-    sha256 "a6a7a8853241fb09ce23d52736d0c75fb9e0254a6f9ae6e553c8121e6750b1cc"
+    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.2/takolabel_0.0.2_Darwin_arm64.tar.gz"
+    sha256 "beffbd2d0722410d923f47d7238d68b3b95e24bb67b7d16c7319458b74eb9c79"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tommy6073/takolabel/releases/download/0.0.1/takolabel_0.0.1_Linux_x86_64.tar.gz"
-    sha256 "ef53c2ddd067f43aedab20811a8ad903050887b3f236b7839a7251fba38b1de0"
+    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.2/takolabel_0.0.2_Linux_x86_64.tar.gz"
+    sha256 "2ea8c88b380acdf5e7789cefbe2c0cc01984b6591091dc04eaf1956a53372d25"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/tommy6073/takolabel/releases/download/0.0.1/takolabel_0.0.1_Linux_arm64.tar.gz"
-    sha256 "a72692f5051a4bbe2a9273d6e9961c4ffbe7610a583ce826fddb1a9c66febf6c"
+    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.2/takolabel_0.0.2_Linux_arm64.tar.gz"
+    sha256 "4171c1772072401804645cbc90a907d4bd2f7d9790ab2037ca0f1cf1351a8b60"
   end
 
   def install
