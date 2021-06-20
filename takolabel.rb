@@ -5,25 +5,30 @@
 class Takolabel < Formula
   desc ""
   homepage ""
-  version "0.0.3"
+  version "0.1.1"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.3/takolabel_0.0.3_Darwin_x86_64.tar.gz"
-    sha256 "b7cdbd95941e4248f42923809f73a79ab0ba9e12de2b435c663e9e9a362da0ab"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/tommy6073/takolabel/releases/download/v0.1.1/takolabel_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "9a6fc4467853985a18020bd3f0e2780610a9dbde13bb75786f0f50731297f81a"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/tommy6073/takolabel/releases/download/v0.1.1/takolabel_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "cd24d2fc8e8d4b38071d50a7bc4e11665d36eeba292ba129eea16af5ea718d97"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.3/takolabel_0.0.3_Darwin_arm64.tar.gz"
-    sha256 "77603d9c1f35970973fb606b206f449cd4654f0c785af1ff98428bc74ebc57c8"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.3/takolabel_0.0.3_Linux_x86_64.tar.gz"
-    sha256 "501102575ab54242611ff41fb37f03aa2876a783f7255c30f41fd1ff362931f9"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/tommy6073/takolabel/releases/download/v0.0.3/takolabel_0.0.3_Linux_arm64.tar.gz"
-    sha256 "e6596ee14b5ddcf25dab4c03b2cc0bf0478030a2980bde8f345026c580806054"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/tommy6073/takolabel/releases/download/v0.1.1/takolabel_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "fa25f2c6a24cf16004e72c5fa449ade9c4d9943e87486e59be2e3c2390218293"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tommy6073/takolabel/releases/download/v0.1.1/takolabel_0.1.1_Linux_arm64.tar.gz"
+      sha256 "029db1a0cda64df249a3f27618b1bd570c9bf4fde11eb1b99c086b1d7a4bd03e"
+    end
   end
 
   def install
