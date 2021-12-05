@@ -5,21 +5,21 @@
 class Takolabel < Formula
   desc ""
   homepage ""
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.0/takolabel_1.1.0_Darwin_arm64.tar.gz"
-      sha256 "9f4f7a6d50245f03ab9ffb8bf7bbb8afa5c3aeb9579e47cc015fc4cf1872e5c9"
+      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.1/takolabel_1.1.1_Darwin_arm64.tar.gz"
+      sha256 "81bca667477c342ab9083a8591fb2823ddeaa6e129cd043e85262ea3e64ae692"
 
       def install
         bin.install "takolabel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.0/takolabel_1.1.0_Darwin_x86_64.tar.gz"
-      sha256 "41be01001286d64468dae8d268217512419668f426401ac38b8f59ce403a8b26"
+      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.1/takolabel_1.1.1_Darwin_x86_64.tar.gz"
+      sha256 "5dfe18ec077253432ebcce22f2b104dbccf42d960413ef2e38340de639bc9bf8"
 
       def install
         bin.install "takolabel"
@@ -29,16 +29,16 @@ class Takolabel < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.0/takolabel_1.1.0_Linux_arm64.tar.gz"
-      sha256 "967c23f3029fa20f107595122542220b8ef8f5cc4d8090f28bd4c0403d6688c1"
+      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.1/takolabel_1.1.1_Linux_arm64.tar.gz"
+      sha256 "274e2cd1640f782c816eb5e03efbd8ca5cabb5d71ed6fdd56e3fe1402d2fd98d"
 
       def install
         bin.install "takolabel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.0/takolabel_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "ffb936d2a990505b30b54ea6ddda9ab25bb605c2299555ae351a70433cd2ae35"
+      url "https://github.com/tommy6073/takolabel/releases/download/v1.1.1/takolabel_1.1.1_Linux_x86_64.tar.gz"
+      sha256 "49bee0904ead658ce1f20a3f5617b45b20351e404412354c133540df9c757ca4"
 
       def install
         bin.install "takolabel"
