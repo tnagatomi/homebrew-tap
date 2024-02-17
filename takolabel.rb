@@ -5,21 +5,21 @@
 class Takolabel < Formula
   desc ""
   homepage ""
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.1/takolabel_1.3.1_darwin_arm64.tar.gz"
-      sha256 "95f9d276921e169038b66bfb6cdb331173301783b434a4a68ba4c6c2290f78c5"
+    if Hardware::CPU.intel?
+      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.2/takolabel_1.3.2_darwin_amd64.tar.gz"
+      sha256 "7b864a49932bbf9379082658ecec2a948f20b681fd2c0570d557b4c8a46dfa75"
 
       def install
         bin.install "takolabel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.1/takolabel_1.3.1_darwin_amd64.tar.gz"
-      sha256 "9ddb2357a7314c39b198c753abd4ee68b3aa30dea221dca8df5d5dd5bf8e018a"
+    if Hardware::CPU.arm?
+      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.2/takolabel_1.3.2_darwin_arm64.tar.gz"
+      sha256 "ac987d58d48e4b8ea3e7f8be7e5e0b4c073034a9e23436e3654ecb47fdd56cac"
 
       def install
         bin.install "takolabel"
@@ -28,17 +28,17 @@ class Takolabel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.1/takolabel_1.3.1_linux_arm64.tar.gz"
-      sha256 "c0ed3f25c4c57198734adbb42f152e83d1dd3ec556618366c0dc44a42584ddfa"
+    if Hardware::CPU.intel?
+      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.2/takolabel_1.3.2_linux_amd64.tar.gz"
+      sha256 "12f7596919d06ffcab777a1c724bf85ebfbb5f05c7917131491c130ac915b8d1"
 
       def install
         bin.install "takolabel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.1/takolabel_1.3.1_linux_amd64.tar.gz"
-      sha256 "f38561be4562ddb1f2c02802c5f7eb6922c9107f5bd3abcd25b92adb8e1478bd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tnagatomi/takolabel/releases/download/v1.3.2/takolabel_1.3.2_linux_arm64.tar.gz"
+      sha256 "b9a33d28cc2fd483f848731de67c3d1cbb07008fafcc7663ac308dcc6aa3fd0b"
 
       def install
         bin.install "takolabel"
